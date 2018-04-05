@@ -12,7 +12,8 @@
 */
 
 Route::get('/', function () {
-    return view('welcome');
+
+    return view('welcome',['name'=>'Svetlana','age'=>43]);
 });
 
 Route::get('/about', function () {
