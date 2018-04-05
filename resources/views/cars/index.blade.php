@@ -5,13 +5,12 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <title>Cars</title>
+    <title>@yield('title')</title>
 
     <!-- Fonts -->
     <link href="https://fonts.googleapis.com/css?family=Raleway:100,600" rel="stylesheet" type="text/css">
 
     <!-- Styles -->
-
 </head>
 <body>
 <div class="flex-center position-ref full-height">
@@ -25,18 +24,14 @@
             @endauth
         </div>
     @endif
-        @foreach($cars as $car)
-    <div class="content">
-        <div class="title m-b-md">
 
-                <p>Title: {{ $car->title }}</p>
-                <p>Producer: {{ $car->producer }}<p>
-                <p>Number of doors: {{ $car->number_of_doors }}</p>
+    @foreach($cars as $car)
 
-        </div>
 
-    </div>
-        @endforeach
+        <a href="/cars/{{$car->id}}">{{$car->title}}</a>
+
+    @endforeach
+
 </div>
 </body>
 </html>

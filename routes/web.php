@@ -13,7 +13,7 @@
 
 Route::get('/', function () {
 
-    return view('welcome',['name'=>'Svetlana','age'=>43]);
+    return view('welcome', ['name' => 'Svetlana', 'age' => 43]);
 });
 
 Route::get('/about', function () {
@@ -21,3 +21,5 @@ Route::get('/about', function () {
 });
 
 Route::get('/cars', 'CarsController@index');
+
+Route::get('/cars/{id}', 'CarsController@show');
